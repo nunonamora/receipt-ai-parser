@@ -1,6 +1,6 @@
 from modules.image_processing import preprocess_image
 from modules.text_extraction import extract_text
-# from modules.gpt_processing import process_text_with_chatgpt
+from modules.gpt_processing import process_text_with_chatgpt
 # from modules.database import insert_receipt, fetch_all_receipts, fetch_receipt_details
 import cv2
 
@@ -16,6 +16,8 @@ def process_receipt(file_path, api_key):
 
     # Extract text from the image
     extracted_text = extract_text(preprocessed_image)
+
+    print(extracted_text)
 
     # Process the text with ChatGPT
     #structured_data = process_text_with_chatgpt(extracted_text, api_key)

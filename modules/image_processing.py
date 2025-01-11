@@ -1,4 +1,6 @@
 import cv2
+from PIL import Image
+
 
 def preprocess_image(image):
     """
@@ -11,5 +13,7 @@ def preprocess_image(image):
 
     # Apply thresholding
     _, threshold = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+
+    Image.fromarray(threshold).show()
 
     return threshold

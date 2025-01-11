@@ -3,7 +3,6 @@ from openai import OpenAI
 
 def process_text_with_chatgpt(text_content, api_key):
     client = OpenAI(api_key=api_key)
-
     # Refined prompt to preserve product language
     prompt = (
         "Parse this receipt into JSON. Rules:\n"
